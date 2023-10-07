@@ -58,11 +58,13 @@
                 }
             }
         }
-        
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Белые клавиши: A, S, D, F, G, H, J; Чёрные клавиши: W, E, T, Y, U.");
-            Console.WriteLine("Переключение между октавами осуществляется с помощью F6, F7, F8.");
+            Console.WriteLine("Белые клавиши: A, S, D, F, G, H, J; Чёрные клавиши: W, E, T, Y, U.\n" +
+                "Переключение между октавами осуществляется с помощью F6, F7, F8.\n" +
+                "Повторное нажатие на клавишу октавы останавливает её работу.\n" +
+                "Для выхода из программы нажмите на любую клавишу или Enter.");
 
             while (true)
             {
@@ -71,20 +73,18 @@
                 switch (Octave.Key)
                 {
                     case ConsoleKey.F6:
-                        Console.WriteLine("F6");
+                        Console.WriteLine("Текущая октава: 6");
                         PianoOctave(SixthOctave);
                         continue;
                     case ConsoleKey.F7:
-                        Console.WriteLine("F7");
+                        Console.WriteLine("Текущая октава: 7");
                         PianoOctave(SeventhOctave);
                         continue;
                     case ConsoleKey.F8:
-                        Console.WriteLine("F8");
+                        Console.WriteLine("Текущая октава: 8");
                         PianoOctave(EigthOctave);
                         continue;
                     default:
-                        Console.WriteLine("Чтобы выйти нажмите ENTER");
-                        Console.ReadLine();
                         Environment.Exit(0);
                         break;
                 }
